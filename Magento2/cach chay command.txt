@@ -1,0 +1,8 @@
+1.Mo cmd 
+run/cmd
+2. Chuyen ve thuc muc chua php(O day thu muc chua php o C:\xampp\php)
+cd <thu muc chua php>
+VD: cd C:\xampp\php
+3. sau do ta chay lenh command tu day
+php <thu muc cua site>/bin/magento command line
+VD: php D:\www\magento\magento2_demo\bin/magento setup:upgrade

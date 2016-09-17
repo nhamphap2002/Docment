@@ -1,0 +1,9 @@
+3.2.1 T est Card Number, Type and Expiry
+Use the following information when testing transactions:
+Card Number: 4444333322221111
+Card Type: VISA
+Card CCV: 123
+Card Expiry: 08 / 08 (or any date greater then today)
+
+
+/home/dev/domains/16jason82seoc.dev.fgct.net/public_html

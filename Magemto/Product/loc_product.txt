@@ -1,0 +1,20 @@
+$today = time();
+            $last = $today - (60*60*24*30);
+
+            $from = date("Y-m-d", $last);
+            $to = date("Y-m-d", $today);
+            $attrSetName = 'Campaign';
+            $attributeSetId = Mage::getModel('eav/entity_attribute_set')
+                            ->load($attrSetName, 'attribute_set_name')
+                            ->getAttributeSetId();
+
+            $products = Mage::getResourceModel('reports/product_collection')
+		->addAttributeToSelect('*')
+                ->addAttributeToSelect(array('name', 'price', 'small_image'))
+		->setStoreId($storeId)
+		->addStoreFilter($storeId)
+		->addViewsCount()
+		->addViewsCount($from, $to);
+            $products->getSelect()->joinInner(array('e2' => 'catalog_product_flat_'.$storeId), 'e2.entity_id = e.entity_id');
+            $products->addAttributeToFilter(array(array('attribute' => 'attribute_set_id', 'neq' => $attributeSetId)));//Loc nhung san pham co thuoc tinh campaign ko hien thi
+            $products->addAttributeToFilter(array(array('attribute' => 'campaign_status', 'null' => true)), '', 'left');//Loc nhung san pham co campaign_status gia tri null khong hien thi

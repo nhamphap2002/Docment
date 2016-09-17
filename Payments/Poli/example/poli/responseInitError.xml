@@ -1,0 +1,13 @@
+<initiatetransactionresponse xmlns="http://schemas.datacontract.org/2004/07/Centricom.POLi.Services.MerchantAPI.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <errors xmlns:a="http://schemas.datacontract.org/2004/07/Centricom.POLi.Services.MerchantAPI.DCO">
+        <a:error>
+            <a:code>1025</a:code>
+            <a:field>
+                <a:message>The CurrencyAmount field is out of range.</a:message>
+            </a:field>
+        </a:error>
+    </errors>
+    <transactionstatuscode i:nil="true">
+        <transaction i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/Centricom.POLi.Services.MerchantAPI.DCO"></transaction>
+    </transactionstatuscode>
+</initiatetransactionresponse>

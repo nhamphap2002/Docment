@@ -1,0 +1,33 @@
+/*
+* Ham nay se thuc hien update thanh scroll va day thanh srcoll xuong duoi cung
+*/
+function scrollToActiveItem(jscroll) {
+/*
+* Tim phan tu cuoi dung cua danh sach de thuc hien scroll
+*/
+        var $activeElement = $(jscroll).find('ul li:last').addClass('islilast');
+        var $jscrollJsp = $(jscroll).data('jsp')
+        $jscrollJsp.reinitialise();
+        $jscrollJsp.scrollToElement($activeElement, true);
+    }
+
+/*
+* Cach goi
+* Chon doi tuong can thuoc hien noi dung nay
+*/
+scrollToActiveItem($(".listmess"))
+
+/*
+* Ham nay se thuc hien update thanh scroll khi co nhieu noi dung goi plugin nay
+*/
+function scrollToActiveItem(jscroll) {
+                    var $jscrollJsp = $j(jscroll).data('jsp');
+                    $jscrollJsp.reinitialise();
+                };
+                $j("#tab_content ul li a").click(function () {
+                    var idDiv = $j(this).attr('href');
+                    setTimeout(function () {
+                        scrollToActiveItem($j(idDiv + " .descPdt"));
+                    }, 1000);
+                    scrollToActiveItem($j(idDiv + " .descPdt"));
+                });

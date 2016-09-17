@@ -1,0 +1,15 @@
+Neu module bi loi page not found khi vao cau hinh thong so cua module ta xu ly loi nay nhu sau
+1. ban hay logout va login lai khu vuc admin(Neu khong duoc thi lam theo giai phap thu 2)
+2. tim den file config them router cho no 
+<admin>
+	<routers>
+	    <osconnect>
+		<use>admin</use>
+		<args>
+		    <module>Onesaas_Connect</module>
+		    <frontName>onesaas-connect</frontName>
+		</args>
+	    </osconnect>
+	</routers>
+    </admin>
+them code nay trong the global

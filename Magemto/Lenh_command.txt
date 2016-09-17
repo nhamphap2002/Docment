@@ -1,0 +1,3 @@
+De su ding sudo chung ta chan ve thu muc cha sau do thao tac len thu muc con no moi lam viec
+VD: De zip thu muc app chung ta phai tro toi thu muc site cha cua app
+sudo tar -zcvf app.tgz app

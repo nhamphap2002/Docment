@@ -1,0 +1,42 @@
+<?php
+if (Mage::getBlockSingleton('page/html_header')->getIsHomePage()) {
+    ?>
+    <!-- Hotjar Tracking Code for www.cafeideas.com.au --> 
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {hjid: 53198, hjsv: 5};
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <?php
+} elseif (Mage::registry('current_category')) {
+    $cat_id = Mage::registry('current_category')->getId();
+    $parentId = Mage::getModel('catalog/category')->load($cat_id)->getParentId();
+    $category = Mage::getModel('catalog/category')->load($parentId);
+    if ($category->getName() == 'Default Category') {
+        ?>
+        <!-- Hotjar Tracking Code for www.cafeideas.com.au --> 
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj = h.hj || function () {
+                    (h.hj.q = h.hj.q || []).push(arguments)
+                };
+                h._hjSettings = {hjid: 53198, hjsv: 5};
+                a = o.getElementsByTagName('head')[0];
+                r = o.createElement('script');
+                r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+        </script>
+        <?php
+    }
+}
+?>

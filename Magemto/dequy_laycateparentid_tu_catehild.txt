@@ -1,0 +1,30 @@
+public function getCateParentId($catID) {
+        //Lay cate parent id cha cua catid
+        $parentId = Mage::getModel('catalog/category')->load($catID)->getParentId();
+        $category = Mage::getModel('catalog/category')->load($parentId);
+        /*
+         * Kiem tra xem cate co active ko
+         */       
+        
+        if(!$category->getIsActive()){
+            return $parentId;
+        }
+        /*
+         * kiem tra xem no co phai la cate 'Default Category' ko
+         * neu ko phai chay lai(de quy)
+         * nguoc lai tra lai id
+         */
+        if ($category->getName() != 'Default Category') {
+            if ($parentId > 0) {
+                return $this->getCateParentId($parentId);
+            } else {
+                $Cate = Mage::getModel('catalog/category')->load($catID);
+                $ID = $Cate->getId();
+                return $ID;
+            }
+        } else {
+            $Cate = Mage::getModel('catalog/category')->load($catID);
+            $ID = $Cate->getId();
+            return $ID;
+        }
+    }

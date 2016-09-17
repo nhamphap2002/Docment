@@ -1,0 +1,7 @@
+403
+Forbidden
+
+Access to this resource on the server is denied!
+
+Loi nay do cac folder wp-admin, wp-content, wp-include set quyen 777 nen chuyen ve 755
+Thay doi quyen cho tat ca cac file co quyen 666 phai thay doi no sang 644

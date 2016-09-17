@@ -1,0 +1,2 @@
+cataloginventory_stock_item
+cataloginventory_stock_status

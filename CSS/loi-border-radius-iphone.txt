@@ -1,0 +1,8 @@
+.fgc-mozilla #mc_embed_signup input#mce-EMAIL{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important; 
+}

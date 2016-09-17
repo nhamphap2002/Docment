@@ -1,0 +1,6 @@
+
+params = params.parseQuery();
+
+VD:
+params = 'text=params&font=1&alignFont=left&color=000000&coloroutline=000000&widthoutline=1&colorshadow=000000&shadowalpha=50&shadowoffsetx=20&shadowoffsety=20&flip_type=0';
+=>params= Object { text="params",  font="1",  alignFont="left",  more...}

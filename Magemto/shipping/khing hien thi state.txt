@@ -1,0 +1,15 @@
+To set up the state options:
+
+1.	On the Admin menu, select System > Configuration > General.
+2.	Click to expand the States Options section, and do the following:
+3.	In the State is required for list, select each country where you want State / Province to be a required entry. To select multiple options, hold down the Ctrl (PC) or Command (Mac) key.
+4.	Set Display not required State to one of the following:
+Yes
+
+In countries where the state field is not required, the field is included in the form as an optional entry.
+
+No
+
+In countries where the state field is not required, the field is omitted from the form.
+
+5.	When complete, click the Save Config button.

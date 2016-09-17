@@ -1,0 +1,11 @@
+if (tvajax != null)
+                tvajax.abort();
+            tvajax = jQuery.ajax({
+                url: '<?php echo ((strpos($formSubmissionUrl, '?') !== false) ? $formSubmissionUrl . '&' : $formSubmissionUrl . '?'); ?>',
+                type: "POST",
+                data: $formData,
+                dataType: 'html',
+                success: function (data, textStatus, jqXHR) {
+                    jQuery('.membership-builder-totals').html(data);
+                }
+            })

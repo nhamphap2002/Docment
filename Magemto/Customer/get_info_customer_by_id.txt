@@ -1,0 +1,2 @@
+$customerId = $_review->getCustomerId();
+			$customer = Mage::getModel('customer/customer')->load($customerId);

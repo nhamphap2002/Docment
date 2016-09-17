@@ -1,0 +1,12 @@
+De su dung request ma hoa cart number trong eway ngoai viec su dung module cua eway chung ta phai kiem tra xem js cua 
+eway da duoc load chua. Neu chua thuc no se khong chay vao su kien cua eway.
+
+Day la file rat quan trong cua module nay
+app\design\frontend\mtyoming\default\template\ewayrapid\js.phtml
+dac biet la dong code nay. Neu no khong duoc load thi no se khong chay vao su kien trong eway js
+<?php default: // Magento default one page checkout ?>
+        var ewayPayment = new EwayPayment($('co-payment-form'), '<?php echo $_config->getEncryptionKey() ?>');
+        Payment.prototype.save = ewayPayment.savePaymentWithEncryption;
+        Review.prototype.save = ewayPayment.saveReviewWithEncryption;
+        <?php endswitch; ?>
+		

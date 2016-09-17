@@ -1,0 +1,15 @@
+1. ban tao file local.xml neu chua ton tai
+2. sau do them doan code sau
+
+<?xml version="1.0" encoding="utf-8" ?>
+<layout version="0.1.0">
+    <catalog_product_view>
+	<!-- INDIVIDUAL PRODUCT VIEW========= -->
+	<!-- Add Review Form to the Review Tab -->
+	<reference name="product.info">
+	    <reference name="product.reviews">
+		<block type="review/form" name="product.review.form" as="review_form" />
+	    </reference>
+	</reference>
+    </catalog_product_view>
+</layout>

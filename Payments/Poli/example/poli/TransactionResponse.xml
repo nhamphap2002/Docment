@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><GetTransactionResponse xmlns="http://schemas.datacontract.org/2004/07/Centricom.POLi.Services.MerchantAPI.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <Errors xmlns:a="http://schemas.datacontract.org/2004/07/Centricom.POLi.Services.MerchantAPI.DCO" />
+    <TransactionStatusCode>Completed</TransactionStatusCode>
+    <Transaction xmlns:a="http://schemas.datacontract.org/2004/07/Centricom.POLi.Services.MerchantAPI.DCO">
+        <a:AmountPaid>200.00</a:AmountPaid>
+        <a:BankReceipt>34504288-784825</a:BankReceipt>
+        <a:BankReceiptDateTime>11 December 2013 21:28:39</a:BankReceiptDateTime>
+        <a:CountryCode>AU</a:CountryCode>
+        <a:CountryName>Australia</a:CountryName>
+        <a:CurrencyCode>AUD</a:CurrencyCode>
+        <a:CurrencyName>Australian Dollar</a:CurrencyName>
+        <a:EndDateTime>2013-12-11T21:28:39.473</a:EndDateTime>
+        <a:ErrorCode i:nil="true" />
+        <a:ErrorMessage i:nil="true" />
+        <a:EstablishedDateTime>2013-12-11T21:25:51.957</a:EstablishedDateTime>
+        <a:FinancialInstitutionCode>iBankAU01</a:FinancialInstitutionCode>
+        <a:FinancialInstitutionCountryCode>AU</a:FinancialInstitutionCountryCode>
+        <a:FinancialInstitutionName>iBank AU 01</a:FinancialInstitutionName>
+        <a:MerchantAcctName>test1</a:MerchantAcctName>
+        <a:MerchantAcctNumber>98742364</a:MerchantAcctNumber>
+        <a:MerchantAcctSortCode>123456</a:MerchantAcctSortCode>
+        <a:MerchantAcctSuffix />
+        <a:MerchantDefinedData />
+        <a:MerchantEstablishedDateTime>2013-12-11T18:25:49</a:MerchantEstablishedDateTime>
+        <a:MerchantReference>16-1386757548</a:MerchantReference>
+        <a:PaymentAmount>200.00</a:PaymentAmount>
+        <a:StartDateTime>2013-12-11T21:25:51.957</a:StartDateTime>
+        <a:TransactionID>567ae60a-5baa-4734-9c00-34011da37b87</a:TransactionID>
+        <a:TransactionRefNo>996111264702</a:TransactionRefNo>
+    </Transaction>
+</GetTransactionResponse>

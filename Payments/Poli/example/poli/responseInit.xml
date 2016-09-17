@@ -1,0 +1,10 @@
+<initiatetransactionresponse xmlns="http://schemas.datacontract.org/2004/07/Centricom.POLi.Services.MerchantAPI.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <errors xmlns:a="http://schemas.datacontract.org/2004/07/Centricom.POLi.Services.MerchantAPI.DCO">
+        <transactionstatuscode>Initiated</transactionstatuscode>
+        <transaction xmlns:a="http://schemas.datacontract.org/2004/07/Centricom.POLi.Services.MerchantAPI.DCO">
+            <a:navigateurl>https://txn.apac.paywithpoli.com/?token=9rDmT%2bl9Pzb4%2fmV0s54wMrKi6mVxvYOl</a:navigateurl>
+            <a:transactionrefno>996111508853</a:transactionrefno>
+            <a:transactiontoken>9rDmT+l9Pzb4/mV0s54wMrKi6mVxvYOl</a:transactiontoken>
+        </transaction>
+    </errors>
+</initiatetransactionresponse>

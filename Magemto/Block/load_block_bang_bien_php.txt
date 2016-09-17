@@ -1,0 +1,9 @@
+$config = array(
+            'template' => 'sleepapnoea/tester_load_ajax.phtml',
+            'lists' => $listAppointment,
+            'itemperpage' => $item_per_page,
+            'currentpage' => Mage::app()->getRequest()->getParam('page'),
+            'totalrecords' => $total_records,
+            'totalpages' => $total_pages
+        );
+        echo $this->getLayout()->createBlock('Mage_Core_Block_Template', 'tester_load_ajax', $config)->toHtml();

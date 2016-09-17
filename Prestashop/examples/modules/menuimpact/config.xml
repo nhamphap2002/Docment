@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <module>
+            <name>menuimpact</name>
+            <displayName><![CDATA[Mega Menu Impact]]></displayName>
+            <version><![CDATA[0.9]]></version>
+            <description><![CDATA[]]></description>
+            <author><![CDATA[GraphikS]]></author>
+            <tab><![CDATA[home]]></tab>
+            <is_configurable>1</is_configurable>
+            <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+        </module>

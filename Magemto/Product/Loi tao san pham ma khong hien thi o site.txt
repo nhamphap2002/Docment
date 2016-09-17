@@ -1,0 +1,3 @@
+Khi tao san pham thanh cong ma no khong hien thi o ngoai site la do
+- Ban chua chon store
+- Ban dang set san pham la our stock

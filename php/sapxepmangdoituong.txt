@@ -1,0 +1,8 @@
+//Process sort by Usort
+		function build_sorter($key) {
+		    return function ($a, $b) use ($key) {
+			return strnatcmp($a[$key], $b[$key]);
+		    };
+		}
+
+		usort($defaultSides, build_sorter('position'));

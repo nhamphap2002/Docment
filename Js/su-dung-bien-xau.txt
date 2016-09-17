@@ -1,0 +1,3 @@
+day la mot bien doi tuong: aitcgConfig168783403(da so duoc rand dam ma chung ta da biet duoc)
+eval("aitcgConfig" + 168783403).productImage.sizeX = 200
+	eval("aitcgConfig" + 168783403).productImage.sizeX = 200

@@ -1,0 +1,4 @@
+Trong truong hop link trong phan admin ma thieu di administrator ban hay lam theo cac buoc sau
+1.vao file configuration.php
+2.tim dong var $live_site = 'https://2015jason27.net'; doi thanh
+    var $live_site = "";

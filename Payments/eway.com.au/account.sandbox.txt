@@ -1,0 +1,35 @@
+https://www.eway.com.au/eway-partner-portal/login
+chien.lexuan@gmail.com
+lexuanchien/Pass1234567
+
+--------------------
+Login URL
+https://sandbox.myeway.com.au
+Username
+chien.lexuan@gmail.com.sand
+pass:Pass1234567
+Customer Id
+91520510
+------------------
+
+The Sandbox allows you to test any valid Visa/MasterCard credit card, however feel free to use the following test cards:
+ 
+
+Visa	4444333322221111
+MasterCard	5105105105105100
+--------------------------------------
+
+'customerId' => '91520510', // Your eWAY Customer ID
+'refundPassword' => 'Abc123456', // My Account ->  eWay Passwords -> XML Refund Password
+
+
+XML Refund Password=Abc123456
+
+
+ API Key/API Password
+60CF3CFwjj1qdZwc4yceuTrw06ONr3PjIzGXusC8MhUsXYb2iOHW9hzDcxDDpYvG9JjQHJ/dwddrtbD
+
+client_side_enc_key
+2nLfofvJLJEXCY7i+pgT2LLR8I3OcsorGtKkaSM/Cp7Qs1QETWYShXxpluDhUXFQc0lynvIi37sXZXtf/EpeiXO4wtBrLcJLJEc0ceUpcDxSEIaoEQQPKBWhTs53crVNZE/eYdw0+8gpnTUNSeYXfNJK4o9QIHNylfLC3YwNzH5NEqZEKmGV2U2B6f3py2mtHEOy2bpZ5CJBJo4kPCR/n6SPFodxDHH7BbCxy4/+Yrglte0/r/v7gY0dzmtI5kK5D+Fk7X3JTax8ygQoTPVobMmQl99TbE6if9s8VPG8sHcawiFVGLimZ8dWE2IyC2J3GALI//zLoPqwbvYjetu7rQ==
+
+

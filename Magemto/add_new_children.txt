@@ -1,0 +1,6 @@
+<block type="core/text_list" name="product.info.tvextrahint" as="tvextrahint" translate="label">
+                    <label>Product View Extra Hint</label>
+                </block>
+				<div class="add-to-box">
+    <?php echo $this->getChildHtml('tvextrahint') ?>
+    			</div>

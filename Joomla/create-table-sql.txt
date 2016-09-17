@@ -1,0 +1,155 @@
+-- -----------------------------------------
+-- Designed by Generate Script Tool
+-- Copyright (c) 2014 by Lê Xuân Chi?n
+-- -----------------------------------------
+--
+-- Table structure for table `#__wppmember_companies`
+--
+
+CREATE TABLE IF NOT EXISTS `#__wppmember_companies` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(150) NOT NULL,
+  `parent` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `#__wppmember_company_list`
+--
+
+CREATE TABLE IF NOT EXISTS `#__wppmember_company_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `company_id` int(11) NOT NULL COMMENT 'Id cua cong ty bao hiem',
+  `listid` int(11) NOT NULL COMMENT 'id cua list trong acy mailing',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `#__wppmember_configs`
+--
+
+CREATE TABLE IF NOT EXISTS `#__wppmember_configs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `config_key` varchar(50) NOT NULL,
+  `config_value` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `#__wppmember_exported_members`
+--
+
+CREATE TABLE IF NOT EXISTS `#__wppmember_exported_members` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `member_ids` text NOT NULL,
+  `export_date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `#__wppmember_policies`
+--
+
+CREATE TABLE IF NOT EXISTS `#__wppmember_policies` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `key` varchar(50) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `number` int(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `#__wppmember_policies_value`
+--
+
+CREATE TABLE IF NOT EXISTS `#__wppmember_policies_value` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `policy_id` int(11) NOT NULL COMMENT 'lay tu bang wppmember_policies',
+  `user_id` int(11) NOT NULL COMMENT 'lay tu bang #__users',
+  `company_id` int(11) NOT NULL COMMENT 'lay tu bang wppmember_companies',
+  `product_id` int(11) NOT NULL COMMENT 'lay tu bang geopc_us (dua theo polis)',
+  `goal_policy` varchar(20) NOT NULL,
+  `policy_number` varchar(50) NOT NULL,
+  `start_time` datetime NOT NULL,
+  `end_time` datetime NOT NULL,
+  `premium` varchar(50) NOT NULL,
+  `purchase_price` varchar(50) NOT NULL,
+  `membership` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `#__wppmember_users`
+--
+
+CREATE TABLE IF NOT EXISTS `#__wppmember_users` (
+  `user_id` int(11) unsigned NOT NULL,
+  `letters` varchar(50) NOT NULL,
+  `firstname` varchar(100) NOT NULL,
+  `lastname` varchar(100) NOT NULL,
+  `street` varchar(150) NOT NULL,
+  `house_number` varchar(50) NOT NULL,
+  `postcode` varchar(50) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `country` varchar(100) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `activation_code` varchar(200) NOT NULL,
+  `gender` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL,
+  `bank_account_number` varchar(100) NOT NULL,
+  `bank_name` varchar(150) NOT NULL,
+  `bank_city` varchar(100) NOT NULL,
+  `isSendMailReminder` tinyint(4) NOT NULL DEFAULT '0',
+  `modified_date` datetime NOT NULL,
+  `extra_info` text DEFAULT NULL,
+  `restoration_advice` tinyint(1) NOT NULL DEFAULT '0',
+  `active_date` datetime NOT NULL,
+  `complete_profile_date` datetime NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `#__wppmember_policies`
+--
+
+INSERT INTO `#__wppmember_policies` (`id`, `key`, `name`, `number`) VALUES
+(1, 'p1', 'Policy 1', 1),
+(2, 'p2', 'Policy 2', 2),
+(3, 'p3', 'Policy 3', 3),
+(4, 'p4', 'Policy 4', 4),
+(5, 'p5', 'Policy 5', 5),
+(6, 'p6', 'Policy 6', 6),
+(7, 'p7', 'Policy 7', 7),
+(8, 'p8', 'Policy 8', 8),
+(9, 'p9', 'Policy 9', 9),
+(10, 'p10', 'Policy 10', 10),
+(11, 'p11', 'Policy 11', 11),
+(12, 'p12', 'Policy 12', 12),
+(13, 'p13', 'Policy 13', 13),
+(14, 'p14', 'Policy 14', 14),
+(15, 'p15', 'Policy 15', 15);
+
+--
+-- Table structure for table `jos_wppmember_media`
+--
+
+CREATE TABLE IF NOT EXISTS `#__wppmember_media` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `policy_value_id` int(11) DEFAULT NULL,
+  `file_name` varchar(255) DEFAULT NULL,
+  `media_type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

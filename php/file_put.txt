@@ -1,0 +1,1 @@
+//file_put_contents('test.txt', $item->getUrl() . in_array($item->getUrl(), $arrItem) . " \n", FILE_APPEND);

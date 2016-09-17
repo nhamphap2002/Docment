@@ -1,0 +1,1 @@
+ mysql.exe --defaults-file="c:\users\ty\appdata\local\temp\tmptevoo5.cnf"  --protocol=tcp --host=dev.fgct.net --user=dev --port=3306 --default-character-set=utf8 --comments --database=dev_2015jason70_dev_fgct_net < "D:\\www\\2015\\jason\\jason_dev.sydneyecommerce\\db-20151221014502.sql"

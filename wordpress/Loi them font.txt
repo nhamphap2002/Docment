@@ -1,0 +1,28 @@
+mo file hoac tao moi neu chua co web.config
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <staticContent>
+            <remove fileExtension=".svg"/>
+            <mimeMap fileExtension=".svg" mimeType="image/svg+xml"/>
+            <remove fileExtension=".woff"/>
+            <mimeMap fileExtension=".woff" mimeType="application/x-font-woff" />
+            <remove fileExtension=".woff2"/>
+            <mimeMap fileExtension=".woff2" mimeType="application/x-font-woff" />
+              <remove fileExtension=".otf"/>
+            <mimeMap fileExtension=".otf" mimeType="application/x-font-otf" />
+        </staticContent>
+        <rewrite>
+            <rules>
+                <rule name="wordpress" patternSyntax="Wildcard">
+                    <match url="*"/>
+                    <conditions>
+                        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true"/>
+                        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true"/>
+                    </conditions>
+                    <action type="Rewrite" url="index.php"/>
+                </rule>
+            </rules>
+        </rewrite>
+    </system.webServer>
+</configuration>

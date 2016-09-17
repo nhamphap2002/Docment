@@ -1,0 +1,5 @@
+$isactive = $this->isCategoryActive($_category);
+$_category: la mot doi tuong cua mot cate nao do
+$categoryId = Mage::helper('crowdfunded')->getPrototypeParentCategoryId();
+$cat = Mage::getModel('catalog/category')->load($categoryId);
+$arr_catId = $cat->getChildrenCategoriesWithInactive();

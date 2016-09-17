@@ -1,0 +1,5 @@
+<?php echo Mage::getBaseUrl()?>
+var BASE_URL_MEDIA = "<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>";
+    var BASE_URL = "<?php echo Mage::getBaseUrl(); ?>";
+var BASE_URL_JS = "<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>";
+<?php echo $this->getSkinUrl('iwd/storelocatori/infobox.js'); ?>

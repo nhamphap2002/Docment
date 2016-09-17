@@ -1,0 +1,2 @@
+{{block type="cms/block" block_id="home_page_ad1"}}
+Day la cach goi mot static block trong mot cms page

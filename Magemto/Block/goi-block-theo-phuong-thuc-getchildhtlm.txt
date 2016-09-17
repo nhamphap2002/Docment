@@ -1,0 +1,8 @@
+
+<?php echo $this->getChildHtml('product.review.form') ?>
+
+//phai dang ky block can hien thi trong block cua trang nao
+//product.review.form ten cua block
+<action method="insert">
+		<block>product.review.form</block>
+	    </action>

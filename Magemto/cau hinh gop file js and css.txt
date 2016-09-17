@@ -1,0 +1,3 @@
+1. config/Developer
+- JavaScript Settings: thay doi gia tri bang no
+- CSS Settings: thay doi gia tri bang no

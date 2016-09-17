@@ -1,0 +1,3 @@
+//Goi view cua symmary cua review
+$reviewHelper = $this->getLayout()->createBlock('review/helper');
+echo $reviewHelper->getSummaryHtml($this->getProduct(), 'short', true);

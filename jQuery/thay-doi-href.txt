@@ -1,0 +1,16 @@
+var urlsite = location.href;
+    var fgccommunity = jQuery("#tribe_events_filters_form select#fgccommunity option:selected").val();
+    var fgcmonth = jQuery("#tribe_events_filters_form select#fgcmonth option:selected").val();
+    if (fgcmonth == '' && fgccommunity == '') {
+        urlsite = urlsite.replace('/?month=&community=', '');
+    }
+    if (fgcmonth == '') {
+        urlsite = urlsite.replace('month=&', '');
+    }
+    if (fgccommunity == '') {
+        urlsite = urlsite.replace('&community=', '');
+    }
+    var page = '';
+    var url = urlsite;
+    var obj = {Page: page, Url: url};
+    history.pushState(obj, obj.Page, obj.Url);

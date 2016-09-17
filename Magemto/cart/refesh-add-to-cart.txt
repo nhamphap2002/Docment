@@ -1,0 +1,6 @@
+public function getTopCartAction(){
+        $this->loadLayout();
+        $sidebar_header = $this->getLayout()->getBlock('cart_top')->toHtml();
+        echo $sidebar_header;
+        exit();
+    }

@@ -1,0 +1,16 @@
+
+-Tao mot module trong magento
+http://www.magentocommerce.com/wiki/5_-_modules_and_development/0_-_module_development_in_magento/custom_module_with_custom_database_table
+- Add mot tab moi trong customer info
+http://www.nextbits.eu/blog/how-to-add-tab-in-customer-information-in-magento-admin/
+
+http://stackoverflow.com/questions/9796128/magento-how-to-get-user-role-from-user-id
+
+http://inchoo.net/magento/how-to-create-a-custom-grid-from-scratch/
+
+Tao mot module co ban trong magento
+http://www.silksoftware.com/magento-module-creator/
+
+Tai lieu phat trien magento
+
+http://merch.docs.magento.com/ce/user_guide/Magento_Community_Edition_User_Guide.html#marketing/price-rules-shopping-cart.html

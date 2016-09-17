@@ -1,0 +1,29 @@
+.input-text:-moz-placeholder {
+    color: #666666; 
+    text-transform: uppercase;}
+.input-text::-moz-placeholder {
+    color: #666666; 
+    text-transform: uppercase;}
+.input-text:-ms-input-placeholder {
+    color: #666666; 
+    text-transform: uppercase;}
+.input-text::-webkit-input-placeholder {
+    color: #999999;
+    text-transform: uppercase;
+    text-transform: uppercase;
+}
+input::-webkit-input-placeholder {
+    color: #4C4D51 !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: #4C4D51 !important;  
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: #4C4D51 !important;  
+}
+
+input:-ms-input-placeholder {  
+    color: #4C4D51 !important;  
+}

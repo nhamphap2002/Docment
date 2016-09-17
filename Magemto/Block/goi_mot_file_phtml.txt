@@ -1,0 +1,1 @@
+<block type="page/html_notices" name="global_notices" as="global_notices" template="page/html/notices.phtml" />

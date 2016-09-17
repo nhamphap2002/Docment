@@ -1,0 +1,45 @@
+D:\www\magento\magento-1.9.2\app\code\local\Mage\Catalog\Block\Product\List\Toolbar.php
+Thuc hien ghi de file core
+tim den dong 385 sua code nhu sau
+
+/**
+     * Set default Order field
+     *
+     * @param string $field
+     * @return Mage_Catalog_Block_Product_List_Toolbar
+     */
+    public function setDefaultOrder($field) {
+        $this->_orderField = 'entity_id';
+        return $this;
+    }
+
+    /**
+     * Set default sort direction
+     *
+     * @param string $dir
+     * @return Mage_Catalog_Block_Product_List_Toolbar
+     */
+    public function setDefaultDirection($dir) {
+        $this->_direction = 'desc';
+        return $this;
+    }
+
+    /**
+     * Retrieve available Order fields list
+     *
+     * @return array
+     */
+    public function getAvailableOrders() {
+        $this->_availableOrder = array(
+            'entity_id' => $this->__('Latest Products'),
+            'position' => $this->__('Position'),
+            'name' => $this->__('Name'),
+            'price' => $this->__('Price'),
+            'brand' => $this->__('Brand'),
+        );
+        return $this->_availableOrder;
+    }
+	
+vao di toi file xml D:\www\magento\magento-1.9.2\app\design\frontend\rwd\default\layout\catalog.xml
+tim dong code product_list_toolbar them code nay trong block nay
+<action method="setDefaultDirection"><dir>desc</dir></action>	

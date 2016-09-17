@@ -1,0 +1,3 @@
+$cat_id = Mage::registry('current_category')->getId();
+$parentId = Mage::getModel('catalog/category')->load($cat_id)->getParentId();
+$category = Mage::getModel('catalog/category')->load($parentId);

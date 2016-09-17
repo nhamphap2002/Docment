@@ -1,0 +1,3 @@
+$this->getLayout()->getBlock('product_review_list.count')
+                ->assign('count', $this->getReviewsCollection()->getSize())
+                ->toHtml()

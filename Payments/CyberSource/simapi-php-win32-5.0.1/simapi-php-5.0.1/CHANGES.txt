@@ -1,0 +1,32 @@
+=====================================================================
+CHANGES: CyberSource Simple Order API for PHP
+=====================================================================
+Copyright 2004-2007 CyberSource Corporation
+
+
+Version 5.0.1
+_______________________________
+
+
+Added support for PHP 5.2.0 through 5.2.5.
+
+
+Version 5.0.0
+_______________________________
+
+1) Values of sensitive fields are now masked in the log file.
+2) CRQ 26511: Added extension for PHP5.1.*, at least through 5.1.2.
+3) Restructured the samples directory.
+
+
+Version 1.1.0
+_______________________________
+
+1) CRQ 24666: Added cybersource library for PHP5.0.3 besides, PHP4 & PHP5.
+2) CRQ 23871: Updated cybs.ini to pointing path as absolute path
+
+
+Version 1.0.0
+_______________________________
+
+This is the initial release.

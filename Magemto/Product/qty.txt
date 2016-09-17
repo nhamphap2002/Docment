@@ -1,0 +1,1 @@
+->setStockData(array('is_in_stock' => $inStock, 'qty' => $qty))

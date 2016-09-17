@@ -1,0 +1,5 @@
+De cai du lieu dome chung ta lam cac buoc sau
+1. cai mot site magento chay ok
+2. vao phpmyadmin xoa cac bang cua database site magento
+3. backup file local.xmt
+4. import database moi vao database vua xoa

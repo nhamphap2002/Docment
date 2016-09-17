@@ -1,0 +1,2 @@
+$login_url = $facebook->getLoginUrl($params = array('scope' => "publish_actions,manage_pages,publish_pages,user_posts,user_photos,user_managed_groups",
+			'redirect_uri' => $ref));

@@ -1,0 +1,3 @@
+kich thuoc that va test
+
+1. Test tren trinh duyet la 320px khi layout thi kich thuoc se la 380px(luu y day la kich thuoc tren iphone)

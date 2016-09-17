@@ -1,0 +1,2 @@
+$rc = Mage::getResourceSingleton('catalog/product');
+    echo $productImage = $rc->getAttributeRawValue($_product->getId(), 'image', Mage::app()->getStore());

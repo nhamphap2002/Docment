@@ -1,0 +1,4 @@
+zip -r <ten thu muc> *
+
+ app.tgz is there
+use this command: sudo tar -zcvf app.tgz app

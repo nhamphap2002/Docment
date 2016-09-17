@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery UI Autocomplete - Default functionality</title>
+    </head>
+    <body>
+        <!--        <script src="http://www.youtube.com/player_api" type="text/javascript"></script></p><div id="player"> </div><p><script type="text/javascript">// <![CDATA[
+                    var player;
+                    function onYouTubePlayerAPIReady() {
+                        player = new YT.Player('player', {height: '456', width: '456', playerVars: {'autoplay': 1, 'controls': 1, 'loop': 1, 'showinfo': 0, 'rel': 0, 'playlist': 'iaH0wZL8GL8'}, 'videoId': 'iaH0wZL8GL8', events: {'onReady': onPlayerReady}});
+                    }
+                    function onPlayerReady(event) {
+                        //event.target.setLoop(1);
+                        event.target.mute();
+                        jQuery(window).load(function () {
+                            if (timeoutplay)
+                                clearTimeout(timeoutplay);
+                            var timeoutplay = setTimeout(function () {
+                                player.playVideo();
+                            }, 1000);
+                        });
+                    }
+                    // ]]></script>-->
+        <!--        <iframe width="1280" height="720" src="https://www.youtube.com/embed/iaH0wZL8GL8?showinfo=0&loop=1&playlist=iaH0wZL8GL8" frameborder="0" allowfullscreen></iframe>-->
+        <script src="http://www.youtube.com/iframe_api" type="text/javascript"></script></p><div id="player"> </div><p><script type="text/javascript">// <![CDATA[
+            var player;
+            function onYouTubePlayerAPIReady() {
+                player = new YT.Player('player', {height: '1080', width: '1920', playerVars: {'autoplay': 1, 'controls': 1, 'showinfo': 0, 'loop': 1, 'rel': 0, 'playlist': 'iaH0wZL8GL8'}, videoId: 'iaH0wZL8GL8', events: {'onReady': onPlayerReady}});
+            }
+            function onPlayerReady(event) {
+                event.target.mute();
+                jQuery(window).load(function () {
+                    if (timeoutplay)
+                        clearTimeout(timeoutplay);
+                    var timeoutplay = setTimeout(function () {
+                        player.playVideo();
+                    }, 1000)
+                })
+            }
+// ]]></script>
+</body>
+</html>

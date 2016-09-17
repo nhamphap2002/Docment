@@ -1,0 +1,2 @@
+UPDATE rav_posts set `guid` = REPLACE(`guid`,'staging.','')
+UPDATE rav_posts set `post_content` = REPLACE(`post_content`,'staging.','')

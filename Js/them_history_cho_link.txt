@@ -1,0 +1,4 @@
+var page = '';
+    var url = urlsite;
+    var obj = {Page: page, Url: url};
+    history.pushState(obj, obj.Page, obj.Url);

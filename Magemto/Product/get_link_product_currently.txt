@@ -1,0 +1,2 @@
+lay tat cac thong tin cua mot san phan
+$_product = $this->getProduct();

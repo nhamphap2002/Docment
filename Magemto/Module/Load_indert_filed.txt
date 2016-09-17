@@ -1,0 +1,6 @@
+Trong magento de chen mot truong vao database co ten title va update_time ta thuc hien nhu sau
+
+$object->setTitle($data['title']);
+
+do bien update_time co dau ghach chan nen ky tu sau gach chan phai viet hoa
+$object->setUpdateTime($data['update_time']);

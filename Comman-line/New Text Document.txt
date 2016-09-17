@@ -1,0 +1,4 @@
+backup thu muc skin
+sudo tar -zcvf skin.tgz skin
+backup thu muc app
+sudo tar -zcvf app.tgz app

@@ -1,0 +1,4 @@
+1) Click on "Select PHP version"
+2) If you're using the "native" php, use the drop down to select the standard version
+3) Click on "Switch to PHP settings"
+4) Modify the settings as required.

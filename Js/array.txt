@@ -1,0 +1,10 @@
+Tao mang json de day du lieu thay cho lay truoc tiep tu form ajax
+var arrForm = [{}];
+	meForm.find('td').each(function () {
+	    var $valueInput = {
+                    name: $(this).find('input[type=text]').attr('name'),
+                    value: $(this).find('input[type=text]').val()
+                };
+	    arrForm.push($valueInput)
+	})
+	

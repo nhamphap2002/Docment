@@ -1,0 +1,41 @@
+/* 
+    Created on : Feb 13, 2014, 4:13:26 PM
+    Author     : Le Xuan Chien <chien.lexuan@gmail.com>
+*/
+#fgc-menu-module{
+    margin-bottom: 15px; border: 1px solid #ddd; padding: 10px 5px;
+}
+.form-channel select{
+    padding: 2px
+}
+.form-channel {
+    position: relative
+}
+.publish{
+    color:blue;
+}
+.unpublish{
+    color:red;
+}
+.link_cronjob{
+    width: 900px;
+}
+.param_chanel{
+        position: absolute;
+    right: 20%;
+    top: 7%;
+}
+.param_chanel h3{
+    text-align: right
+}
+.loading{
+      background: url("../images/loading.gif") no-repeat scroll center center transparent;
+    height: 24px;
+    margin-left: 90px;
+    position: absolute;
+    top: 0;
+    width: 24px;
+    display: none
+}
+#cat,
+#cat1,#cat2{display:none}
