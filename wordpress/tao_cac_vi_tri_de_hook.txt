@@ -1,4 +1,0 @@
-De them mot vi tri sau nay chi can goi 
-add_action( 'woocommerce_checkout_before_billing', 'woocommerce_checkout_payment', 20 );
-la no se hien thi noi dung o vi tri ta dat
-<?php do_action('woocommerce_checkout_before_billing'); ?>
