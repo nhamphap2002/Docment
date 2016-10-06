@@ -6,3 +6,12 @@ VD: cd C:\xampp\php
 3. sau do ta chay lenh command tu day
 php <thu muc cua site>/bin/magento command line
 VD: php D:\www\magento\magento2_demo\bin/magento setup:upgrade
+
+Cai module bang winscp chung ta chay command line
+php bin/magento setup:upgrade
+
+php bin/magento module:enable VladimirPopov_WebForms
+php bin/magento setup:upgrade
+
+Xem thong tin cac lenh command
+php bin/magento

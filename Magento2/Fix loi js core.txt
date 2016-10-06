@@ -1,0 +1,2 @@
+Xoa thu muc cua theme Novaworks
+D:\www\magento\magento2\pub\static\frontend\Novaworks

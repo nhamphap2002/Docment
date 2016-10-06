@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript">
+            require([
+                'jquery',
+                'owl.carousel/owl.carousel.min'
+            ], function ($) {
+                $("#banner-slider-demo-1").owlCarousel({
+                    items: 1,
+                    autoplay: true,
+                    autoplayTimeout: 5000,
+                    autoplayHoverPause: true,
+                    dots: false,
+                    nav: true,
+                    navRewind: true,
+                    animateIn: 'fadeIn',
+                    animateOut: 'fadeOut',
+                    loop: true,
+                    navText: ["<em class='nc-icon-outline arrows-1_minimal-left'></em>", "<em class='nc-icon-outline arrows-1_minimal-right'></em>"]
+                });
+            });
+            jQuery(window).load(function () {
+                /*
+                 * Su dung require de load mot file js
+                 */
+                require([
+                    'jquery',
+                    'http://maps.google.com/maps/api/js?sensor=false',/* link toi mot file js*/
+                    'js/jquery.gmap'/*Tro lo thu muc chua js cua theme*/                    
+                ], function ($) {
+                    /*
+                     * Thuc hien xu ly js sau khi cac file js da duoc load
+                     */
+                    jQuery('.mapview').click(function (e) {
+                        console.log('test')
+                        var address = jQuery(this).attr('rel').split('#');
+                        jQuery('#showmap').click();
+                        jQuery("#map").gMap({
+                            controls: false,
+                            scrollwheel: true,
+                            maptype: 'TERRAIN',
+                            markers: [{
+                                    latitude: address[2],
+                                    longitude: address[3],
+                                    html: '<strong>' + address[1] + '</strong><br />' + address[0],
+                                    icon: {
+                                        image: "http://www.huntleather.com.au:80/skin/frontend/default/huntleather/images/map_pin.png",
+                                        iconsize: [45, 52],
+                                        iconanchor: [22, 52],
+                                        infowindowanchor: [22, 0]
+                                    },
+                                }],
+                            zoom: 15
+                        });
+                        $.fancybox('#modal-map', {
+                            afterClose: function () {
+                                jQuery('#modal-map #map').html('');
+                            },
+                            beforeShow: function () {
+                                jQuery("#map").gMap({
+                                    controls: false,
+                                    scrollwheel: true,
+                                    maptype: 'TERRAIN',
+                                    markers: [{
+                                            latitude: address[2],
+                                            longitude: address[3],
+                                            html: '<strong>' + address[1] + '</strong><br />' + address[0],
+                                            icon: {
+                                                image: "http://www.huntleather.com.au:80/skin/frontend/default/huntleather/images/map_pin.png",
+                                                iconsize: [45, 52],
+                                                iconanchor: [22, 52],
+                                                infowindowanchor: [22, 0]
+                                            },
+                                        }],
+                                    zoom: 15
+                                });
+                            }
+                        })
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>

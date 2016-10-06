@@ -1,0 +1,5 @@
+Thu muc chua css va js
+- Note: can phan chinh sua css va js trong thu muc nay 
+D:\www\magento\magento2\app\design\frontend\Novaworks\thebear\web
+Thu muc chua cac file cau truc cua theme
+D:\www\magento\magento2\app\design\frontend\Novaworks\thebear\Novaworks_Thebear\templates\html\
