@@ -1,0 +1,2 @@
+Loi reload loai trang khi chon rewardpoints trong phuong thuc thanh toan 
+Tim den file rewardpoints bo dong code window.location.reload();
