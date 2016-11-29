@@ -22,3 +22,23 @@ function tv_override_shipping_fields($fields) {
     );
     return $fields;
 }
+/*
+ * Validate my account
+ */
+add_filter( 'woocommerce_process_myaccount_field_billing_state' , 'validate_billing_state' );
+function validate_billing_state() {
+    $billing_state = $_POST['billing_state'];
+    if ($billing_state == '') {     
+        wc_add_notice( __( 'State / County is a required field.' ), 'error' );
+    }
+    return $billing_state ; 
+} 
+
+add_filter( 'woocommerce_process_myaccount_field_shipping_state' , 'validate_shipping_state' );
+function validate_edit_address() {
+    $shipping_state = $_POST['shipping_state'];
+    if ($shipping_state == '') {     
+        wc_add_notice( __( 'State / County is a required field.' ), 'error' );
+    }
+    return $shipping_state ; 
+} 
