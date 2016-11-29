@@ -1,1 +1,6 @@
 <block type="page/html_notices" name="global_notices" as="global_notices" template="page/html/notices.phtml" />
+<?php
+            echo $this->getLayout()->createBlock('customer/form_register')->setTemplate('customer/form/register.phtml')->tohtml();
+hoac cung the goi nhu the nay(Nhung it khi no lam viec dung)
+echo $this->getChildHtml('global_notices'); ?>
+            ?>

@@ -1,0 +1,57 @@
+Current Url.
+Get Url in phtml files
+
+TO Retrieve URL path in PHTML
+
+Note: In editing PHTML don’t forget to change the following code with PHP tag
+
+(a) Unsecure Skin Url :
+
+
+$this->getSkinUrl('images/imagename.jpg');
+(b) Secure Skin Url :
+
+
+$this->getSkinUrl('images/imagename.gif', array('_secure'=>true));
+. Get Magento Base Url :
+
+
+Mage::getBaseUrl();
+2. Get Magento Skin Url :
+
+
+Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);
+3. Get Magento Media Url:
+
+
+Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+4. Get Magento Js Url:
+
+
+Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS);
+5. Get Magento Store Url:
+
+
+Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+6. Get Magento Current Url:
+
+
+Mage::helper('core/url')->getCurrentUrl();
+Get Url in cms pages or static blocks
+
+. Get  magento Base Url :
+
+
+{{store url=""}}
+2. Get magento Skin Url :
+
+
+{{skin url='images/imagename.jpg'}}
+3. Get magento Media Url :
+
+
+{{media url='/imagename.jpg'}}
+4. Get magento Store Url :
+
+
+{{store url='mypage.html'}}
