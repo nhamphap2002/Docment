@@ -27,3 +27,18 @@ input::-moz-placeholder {  /* Firefox 19+ */
 input:-ms-input-placeholder {  
     color: #4C4D51 !important;  
 }
+#search::-webkit-input-placeholder {
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: pink;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: pink;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: pink;
+}
