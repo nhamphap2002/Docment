@@ -1,0 +1,10 @@
+Trong truong hop mot view nao do khong chay chung ta thuc hien kiem tra code cua cac bien sau:
+$this->state = $this->get('State');
+        $this->item = $this->get('Data');
+        $this->params = $app->getParams('com_khanhhoa79_tuyendung');
+        $this->form = $this->get('Form');
+
+        // Check for errors.
+        if (count($errors = $this->get('Errors'))) {
+            throw new Exception(implode("\n", $errors));
+        }
