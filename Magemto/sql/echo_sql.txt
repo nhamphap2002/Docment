@@ -1,1 +1,5 @@
 echo $productCollection->getSelect();
+
+$collection = Mage::getModel('clarion_reviewreminder/reviewreminder')->getCollection()
+            ->addFieldToFilter('is_review_added', 1);
+        $collection->printLogQuery(true);

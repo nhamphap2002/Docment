@@ -1,0 +1,45 @@
+Do cac module nay ghi de
+G:\www\magento\magento1\app\code\community\TM\Email\Model\Template.php
+
+G:\www\2016\Jason\jason131_RapidSpray\app\code\community\Ebizmarts\Mandrill\Model\Email\Template.php
+
+G:\www\2016\Jason\jason131_RapidSpray\app\code\local\Aschroder\SMTPPro\Model\Email\Template.php
+Dong code 
+ // Use the queue IFF it's not bypassed and it's been set.
+        if (!$_helper->isQueueBypassed() &&
+            $this->hasQueue() && $this->getQueue() instanceof Mage_Core_Model_Email_Queue) {
+
+            /** @var $emailQueue Mage_Core_Model_Email_Queue */
+            $emailQueue = $this->getQueue();
+            $emailQueue->setMessageBody($text);
+            $emailQueue->setMessageParameters(array(
+                'subject'           => $subject,
+                'return_path_email' => $returnPathEmail,
+                'is_plain'          => $this->isPlain(),
+                'from_email'        => $this->getSenderEmail(),
+                'from_name'         => $this->getSenderName(),
+                'reply_to'          => $this->getMail()->getReplyTo(),
+                'return_to'         => $this->getMail()->getReturnPath(),
+            ))
+                ->addRecipients($emails, $names, Mage_Core_Model_Email_Queue::EMAIL_TYPE_TO)
+                ->addRecipients($this->_bccEmails, array(), Mage_Core_Model_Email_Queue::EMAIL_TYPE_BCC);
+            $emailQueue->addMessageToQueue();
+
+            $_helper->log('Email not sent immediately, queued for sending.');
+
+            return true;
+        }
+		thi no se lam viec ok
+		
+G:\www\2016\Jason\jason131_RapidSpray\app\code\community\Ebizmarts\Mandrill\etc\config.xml
+Dong code 
+<!--        <models>
+            <mandrill>
+                <class>Ebizmarts_Mandrill_Model</class>
+            </mandrill>
+            <core>
+                <rewrite>
+                    <email_template>Ebizmarts_Mandrill_Model_Email_Template</email_template>
+                </rewrite>
+            </core>
+        </models>-->		

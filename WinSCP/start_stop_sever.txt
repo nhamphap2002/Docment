@@ -1,0 +1,8 @@
+
+sudo service nginx-pagespeed start
+OR 
+sudo service nginx start
+
+sudo service nginx-pagespeed stop
+OR
+sudo service nginx stop
