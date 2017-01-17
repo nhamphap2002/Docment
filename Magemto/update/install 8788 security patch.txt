@@ -1,0 +1,8 @@
+if no ssh access then need to run using php
+
+<?php
+print("<PRE>");
+passthru("/bin/bash PATCH_SUPEE-8788_CE_1.9.2.2_v2-2016-10-14-09-41-22.sh");
+print("</PRE>");
+echo "Done";
+?>

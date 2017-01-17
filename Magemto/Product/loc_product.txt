@@ -18,3 +18,7 @@ $today = time();
             $products->getSelect()->joinInner(array('e2' => 'catalog_product_flat_'.$storeId), 'e2.entity_id = e.entity_id');
             $products->addAttributeToFilter(array(array('attribute' => 'attribute_set_id', 'neq' => $attributeSetId)));//Loc nhung san pham co thuoc tinh campaign ko hien thi
             $products->addAttributeToFilter(array(array('attribute' => 'campaign_status', 'null' => true)), '', 'left');//Loc nhung san pham co campaign_status gia tri null khong hien thi
+			
+			
+			
+\\XUANCHIEN-PC\share_projects\jason17_customgear.com.au\site\app\code\community\Ikantam\Crowdfunded\Block\Campaign\List.php			

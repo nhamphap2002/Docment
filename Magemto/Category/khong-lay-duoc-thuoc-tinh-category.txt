@@ -1,0 +1,2 @@
+Chung ta su dung ham getAttributeRawValue
+$ampHomeImage = Mage::getResourceModel('catalog/category')->getAttributeRawValue($_category->getId(), "amp_homepage_image", Mage::app()->getStore()->getId());
