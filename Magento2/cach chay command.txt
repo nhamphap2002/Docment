@@ -17,3 +17,8 @@ php bin/magento setup:upgrade
 
 Xem thong tin cac lenh command
 php bin/magento
+ cache:clean
+ 
+$P$BxcArpn4l/ly85bU3/C.G1k/DZRENu/
+ 
+$P$BxcArpn4l/ly85bU3/C.G1k/DZRENu/

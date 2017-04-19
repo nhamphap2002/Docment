@@ -1,0 +1,230 @@
+32 do?n code vô cùng h?u ích cho website WordPress c?a b?n (ph?n 2)
+
+
+32 do?n code vô cùng h?u ích cho website Wordpress c?a b?n (ph?n 1)
+(Ph?n 1) gi?i thi?u 32 do?n code vô cùng h?u ích, giúp b?n tu? bi?n và m? r?ng ch?c nang c?a Website Wordpress m?t cách hi?u qu?
+
+9. Không s? d?ng icon Emoji
+T? phiên b?n 4.2, WordPress dã cho phép h? tr? hi?n th? các emotion quen thu?c gi?ng nhu trên di?n tho?i và facebook mà ngu?i ta hay g?i là Emoji. Nhung dôi lúc chúng ta không c?n dùng d?n nó, ví d? nhu tui thích d? cái icon m?t cu?i th?o mai nhu th? này ?? thay cho cái icon c? chu?i, và hon n?a, t?t Emoji di cung giúp ti?t ki?m b?t m?t vài resource không c?n thi?t.
+
+ 1
+ 2
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+Chú ý: Hoi d?ng lòng là v? sau này các trình duy?t phiên b?n m?i nh?t tích h?p th?ng tính nang nh?n d?ng icon Emoji, nghia là m?c d?nh d?u "hai ch?m dóng ngo?c" ? phía trên s? l?i chuy?n thành emoji b?t ch?p source code c?a mình hoàn toàn không có m?t do?n code emoji nào c?. Các trình duy?t cu không t? nh?n d?ng emoji s? v?n th?y d?u "hai ch?m dóng ngo?c" bình thu?ng. Có l? khi dó do?n code phía trên ch? d? gi?m b?t m?t do?n script mà thôi.
+
+10. Chuy?n h?t Javascript xu?ng cu?i trang
+Ðây cung là m?t th? thu?t nh?m tang t?c d? t?i website, vì khi javascript n?m ? d?u trang, quá trình th?c thi JS s? ngan không cho trang web ti?p t?c t?i xu?ng, gây hi?u ?ng render-blocking làm ch?m t?c d? website.
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+add_action('wp_enqueue_scripts', 'remove_head_scripts')
+public function remove_head_scripts() {
+    remove_action('wp_head', 'wp_print_scripts');
+    remove_action('wp_head', 'wp_print_head_scripts', 9);
+    remove_action('wp_head', 'wp_enqueue_scripts', 1);
+    add_action('wp_footer', 'wp_print_scripts', 5);
+    add_action('wp_footer', 'wp_enqueue_scripts', 5);
+    add_action('wp_footer', 'wp_print_head_scripts', 5);
+}
+Sau khi chèn code này, view-source c?a trang web b?ng Ctrl U và xem k?t qu?.
+
+11. Thêm tài kho?n admin b?ng file functions.php
+Ðây là m?t tips vô cùng hay, tru?ng h?p website c?a b?n b? t?n công, thay d?i h?t toàn b? account nhung b?n v?n còn gi? quy?n truy c?p source code và database. V?y t?i sao không th? t?o m?t account administrator t? file functions.php d? l?y l?i quy?n truy c?p site admin ch??
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+function wpb_admin_account(){
+    $user = 'Username';
+    $pass = 'Password';
+    $email = 'email@domain.com';
+    if ( !username_exists( $user )  && !email_exists( $email ) ) {
+        $user_id = wp_create_user( $user, $pass, $email );
+        $user = new WP_User( $user_id );
+        $user->set_role( 'administrator' );
+    } 
+}
+add_action('init','wpb_admin_account');
+Nh? di?n chính xác username/password/email b?n mu?n nhé. B?n hoàn toàn có th? chèn thêm user tr?c ti?p t? PhpMyAdmin, nhung mình s? hu?ng d?n ? m?t bài khác.
+
+12. Thêm d?u phân cách m?i vào thanh breadcrumb c?a Yoast SEO
+M?c d?nh Yoast SEO s? d?ng m?t trong các ký t? sau làm ký t? phân cách breadcrumb (thanh phân c?p bài vi?t)
+
+
+
+N?u b?n mu?n dùng m?t ký t? khác nh?ng ký t? ? danh sách trên, ví d? nhu tui thích dùng ký t? ‹ (g?n gi?ng d?u nh? hon, nhung trông don gi?n và chuyên nghi?p hon so v?i phân cách b?ng d?u <), don gi?n là thêm do?n code sau. Ð?m b?o b?n dang dùng breadcrumb c?a YoastSEO nhé.
+
+ 1
+ 2
+ 3
+ 4
+ 5
+add_filter('wpseo_separator_options', 'yoast_custom_separator', 10, 1);
+function yoast_custom_separator($sep) {
+    $sep[] = '‹';
+    return $sep;
+}
+13. Tu? bi?n d? dài ph?n tóm t?t n?i dung
+M?c d?nh khi hi?n th? danh sách bài vi?t, b?n d? ý ki s? th?y WordPress ch? hi?n th? m?t ph?n n?i dung bài vi?t và k?t thúc b?ng "… xem thêm". Sô lu?ng t? wordpress cho phép hi?n th? trong do?n tóm t?t n?i dung d?y là 55 t?, n?u b?n mu?n hi?n th? nhi?u hon ho?c ít hon 55 t?, thì dây là tips.
+
+ 1
+ 2
+ 3
+ 4
+functionnew_excerpt_length($length) {
+    return 150; // Hi?n th? 150 t? luôn :))
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+14. B?t bu?c ngu?i vi?t bài ph?i set ?nh d?i di?n cho bài vi?t
+Khi website c?a b?n có nhi?u content creator, và b?n yêu c?u m?i bài vi?t du?c dang lên d?u b?t bu?c ph?i có hình ?nh d?i di?n, thì dây là cách don gi?n và nhanh g?n l? nh?t. Không c?n ph?i g?i mail hay pm t?ng d?a và quát nó "ê, set ?nh d?i di?n cho bài vi?t di b? tèo!" dâu =))
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+  
+23
+24
+25
+add_action('save_post', 'wpds_check_thumbnail');
+add_action('admin_notices', 'wpds_thumbnail_error');
+function wpds_check_thumbnail( $post_id ) {
+    // change to any custom post type 
+    if( get_post_type($post_id) != 'post' )
+        return;
+    if ( ! has_post_thumbnail( $post_id ) ) {
+        // set a transient to show the users an admin message
+        set_transient( "has_post_thumbnail", "no" );
+        // unhook this function so it doesn't loop infinitely
+        remove_action('save_post', 'wpds_check_thumbnail');
+        // update the post set it to draft
+        wp_update_post(array('ID' => $post_id, 'post_status' => 'draft'));
+        add_action('save_post', 'wpds_check_thumbnail');
+    } else {
+        delete_transient( "has_post_thumbnail" );
+    }
+}
+function wpds_thumbnail_error() {
+    // check if the transient is set, and display the error message
+    if ( get_transient( "has_post_thumbnail" ) == "no" ) {
+        echo "<div id='message' class='error'><p><strong>Ð?ng quên set ?nh d?i di?n tru?c khi dang bài nhé b? tèo.</strong></p></div>";
+        delete_transient( "has_post_thumbnail" );
+    }
+}
+15. Delay th?i gian c?p nh?t bài vi?t lên RSS feed
+S? d?ng do?n code này khi b?n mu?n dang bài ngay, nhung l?i chua mu?n ngu?i dùng subscribe trang web c?a b?n nh?n du?c tin ngay l?p t?c. Có th? vì b?n c?n m?t ít th?i gian theo dõi l?i n?i dung bài vi?t th?t c?n th?n hay sao dó tru?c khi phân ph?i n?i dung d?n ngu?i d?c.
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+function Delay_RSS_After_Publish($where) {
+    global $wpdb;
+    if (is_feed()) {
+        $now = gmdate('Y-m-d H:i:s');
+        $wait = '60';
+        $device = 'MINUTE';
+        $where.=" AND TIMESTAMPDIFF($device, $wpdb->posts.post_date_gmt, '$now') > $wait ";
+    }
+    return $where;
+}
+add_filter('posts_where', 'Delay_RSS_After_Publish');
+16. Thay jQuery m?c d?nh c?a WordPress b?ng jQuery CDN
+ 1
+ 2
+ 3
+ 4
+ 5
+  
+ 6
+ 7
+ 8
+add_action( 'init', 'jquery_register' );
+function jquery_register() {
+    if ( !is_admin() ) {
+        wp_deregister_script( 'jquery' );
+        wp_register_script( 'jquery', ( 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' ), false, null, true );
+        wp_enqueue_script( 'jquery' );
+    }
+}
+Thay jQuery m?c d?nh c?a WordPress b?ng jQuery CDN c?a Google s? giúp jquery du?c t?i nhanh hon nh? t?n d?ng l?i th? c?a CDN.
+
+17. CSS l?i trang admin dashboard
+ 1
+ 2
+  
+  
+  
+  
+ 3
+ 4
+function custom_admin_styles() {
+    echo '<style type="text/css">
+        #wphead{
+            background:#696969
+        }
+    </style>';
+}
+add_action('admin_head', 'custom_admin_styles');
+18. Chèn code Google Analytics không c?n plugin
+Th?t ra thì n?u mu?n dùng plugin, mình g?i ý cho b?n plugin Google Analytics Dashboard for WP, nó có h?n m?t panel trên trang admin dashboard cho phép hi?n th? toàn b? các thông tin và d? th? c?n thi?t nhu https://analytics.google.com. N?u không c?n d?n nó, và cung không thích cài nhi?u plugin gi?ng mình, có th? s? d?ng code này
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+function add_google_analytics() {
+    echo '<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>';
+    echo '<script type="text/javascript">';
+    // Thay tracking code c?a b?n vào UA-XXXXX-X nhé
+    echo 'var pageTracker = _gat._getTracker("UA-XXXXX-X");';
+    echo 'pageTracker._trackPageview();';
+    echo '</script>';
+}
+add_action('wp_footer', 'add_google_analytics');

@@ -1,0 +1,2 @@
+if (Mage::registry('product')) :
+<?php elseif (Mage::registry('current_category')) : ?>

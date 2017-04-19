@@ -1,0 +1,14 @@
+\\HOANGBIEN\2016_share\jason\jason134_buyWatches\site\app\code\community\Algolia\Algoliasearch\etc\config.xml
+Tim va dong dong code sau
+<catalogsearch_mysql4>
+                <rewrite>
+                    <fulltext>Algolia_Algoliasearch_Model_Resource_Fulltext</fulltext>
+                    <fulltext_collection>Algolia_Algoliasearch_Model_Resource_Fulltext_Collection</fulltext_collection>
+                </rewrite>
+            </catalogsearch_mysql4>
+            <catalogsearch_resource>
+                <rewrite>
+                    <fulltext>Algolia_Algoliasearch_Model_Resource_Fulltext</fulltext>
+                    <fulltext_collection>Algolia_Algoliasearch_Model_Resource_Fulltext_Collection</fulltext_collection>
+                </rewrite>
+            </catalogsearch_resource>

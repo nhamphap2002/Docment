@@ -1,0 +1,2 @@
+Hay tao phai nay https://curl.haxx.se/ca/cacert.pem
+kich hoat curl.cainfo = "C:\xampp\php\cacert.pem"
