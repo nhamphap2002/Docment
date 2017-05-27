@@ -1,0 +1,3 @@
+G:\www\2017\Jason\lifesizestandups\site\app\code\local\MST\Pdp\Block\Adminhtml\Tabs.php
+tim $valid = false; bang $valid = true;
+ 
