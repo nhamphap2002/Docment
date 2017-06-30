@@ -1,0 +1,12 @@
+<reference name="catalog.leftnav">
+            <!--            <action method="setTemplate">
+                <template>pramp/catalog/category/filter.phtml</template>
+            </action>-->
+            <block type="catalog/layer_view" name="catalog.leftnav" after="currency"
+                   template="catalog/layer/ampview.phtml">
+                <action method="unsetChild">
+                    <child>category_filter</child>
+                </action>
+                <block type="amshopby/catalog_layer_view_top" name="amshopby.navtop.list" template="amasty/amshopby/category_top.phtml"/>
+            </block>
+        </reference>

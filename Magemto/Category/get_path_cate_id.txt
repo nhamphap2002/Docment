@@ -1,0 +1,5 @@
+<?php $currentCat = Mage::registry('current_category'); ?>
+<?php
+$exp = explode("/", $currentCat->getPath());
+print_r($exp);
+?>
