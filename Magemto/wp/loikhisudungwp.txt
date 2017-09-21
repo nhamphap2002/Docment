@@ -1,0 +1,16 @@
+G:\www\2016\Jason\jason131_RapidSpray\app\code\core\Mage\Core\functions.php
+
+/**
+ * Translator function
+ *
+ * @deprecated 1.3
+ * @param string $text the text to translate
+ * @param mixed optional parameters to use in sprintf
+ */
+if (!function_exists('__')) {
+
+    function __() {
+        return Mage::app()->getTranslator()->translate(func_get_args());
+    }
+
+}

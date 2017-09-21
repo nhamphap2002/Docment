@@ -4,3 +4,11 @@
 hoac cung the goi nhu the nay(Nhung it khi no lam viec dung)
 echo $this->getChildHtml('global_notices'); ?>
             ?>
+			
+			
+<block type="infinitescroll/init" name="infinitescroll_init">
+                <action method="setTemplate">
+                    <template>strategery/infinitescroll/init.phtml</template>
+                </action>
+            </block>			
+			<?php echo $this->getLayout()->createBlock('infinitescroll/init')->setTemplate('strategery/infinitescroll/init.phtml')->tohtml(); ?>

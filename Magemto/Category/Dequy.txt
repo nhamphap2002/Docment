@@ -1,0 +1,33 @@
+function getCateParentId($catID, $idstop) {
+
+    $parentId = Mage::getModel('catalog/category')->load($catID)->getParentId();
+    $category = Mage::getModel('catalog/category')->load($parentId);
+    if ($catID == $idstop) {
+        return $idstop;
+    }
+    if (!$category->getIsActive()) {
+        if ($parentId == $idstop) {
+            return $idstop;
+        } else {
+            return 0;
+        }
+    }
+
+    if ($category->getId() != $idstop) {
+        if ($category->getName() == 'Default Category') {
+            return 0;
+        } else {
+            if ($parentId > 0) {
+                return getCateParentId($parentId, $idstop);
+            } else {
+                $Cate = Mage::getModel('catalog/category')->load($catID);
+                $ID = $Cate->getId();
+                return $ID;
+            }
+        }
+    } else {
+        $Cate = Mage::getModel('catalog/category')->load($catID);
+        $ID = $Cate->getId();
+        return $ID;
+    }
+}
