@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Fgc_Lead>
+            <version>0.0.1</version>
+        </Fgc_Lead>
+    </modules>
+ 
+    <global>
+        <blocks>
+            <catalog>
+                <rewrite>
+                    <product_view>Fgc_Lead_Block_View</product_view>
+                </rewrite>
+            </catalog>
+        </blocks>
+        <helpers>
+            <lead>
+                <class>Fgc_Lead_Helper</class>
+            </lead>
+        </helpers>
+    </global>
+</config>

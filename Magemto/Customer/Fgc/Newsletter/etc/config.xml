@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Fgc_Newsletter>
+      <version>0.1.0</version>
+    </Fgc_Newsletter>
+  </modules>
+  <global>
+    <helpers>
+      <newsletter>
+        <class>Fgc_Newsletter_Helper</class>
+      </newsletter>
+    </helpers>
+	<models>
+	  <newsletter>
+		<class>Fgc_Newsletter_Model</class>
+		<resourceModel>newsletter_mysql4</resourceModel>
+	  </newsletter>
+	</models>
+    <events>
+	  <newsletter_subscriber_save_after> <!-- identifier of the event we want to catch -->
+        <observers>
+          <newsletter_subscriber_save_after_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>newsletter/observer</class> <!-- observers class alias -->
+            <method>addCustomername</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </newsletter_subscriber_save_after_handler>
+        </observers>
+      </newsletter_subscriber_save_after>
+    </events>
+  </global>
+</config> 

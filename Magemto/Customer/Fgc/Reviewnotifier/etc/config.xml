@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Fgc_Reviewnotifier>
+            <version>0.1.0</version>
+        </Fgc_Reviewnotifier>
+    </modules>
+    <global>
+        <helpers>
+            <reviewnotifier>
+                <class>Fgc_Reviewnotifier_Helper</class>
+            </reviewnotifier>
+        </helpers>
+        <models>
+            <reviewnotifier>
+                <class>Fgc_Reviewnotifier_Model</class>
+                <resourceModel>reviewnotifier_mysql4</resourceModel>
+            </reviewnotifier>
+        </models>
+        <template>
+            <email>
+                <review_notify module="Fgc_Reviewnotifier">
+                    <label>Review Nofify</label>
+                    <file>review_notify.html</file>
+                    <type>html</type>
+                </review_notify>
+            </email>
+        </template>
+    </global>
+    <frontend>
+        <events>
+            <review_save_after>
+                <observers>
+                    <fgc_reviewnotifier_observer>
+                        <type>singleton</type>
+                        <class>reviewnotifier/observer</class>
+                        <method>reviewSaveAfter</method>
+                    </fgc_reviewnotifier_observer>
+                </observers>
+            </review_save_after>
+        </events>
+    </frontend>
+</config> 
