@@ -4,6 +4,7 @@ run/cmd
 cd <thu muc chua php>
 VD: cd C:\xampp\php
 VD: cd D:\xampp\php
+hoac d:
 3. sau do ta chay lenh command tu day
 php <thu muc cua site>/bin/magento command line
 VD: php D:\www\magento\magento2_demo\bin/magento setup:upgrade
@@ -22,3 +23,42 @@ php bin/magento
 $P$BxcArpn4l/ly85bU3/C.G1k/DZRENu/
  
 $P$BxcArpn4l/ly85bU3/C.G1k/DZRENu/
+
+php D:\www\2017\mg\pj07\site\bin/magento setup:static-content:deploy
+php D:\www\2017\mg\pj07\site\bin/magento setup:upgrade
+
+php D:\www\2017\mg\pj07\site\bin/magento setup:static-content:deploy --language en_GB --exclude-theme Pagayo/pt901
+
+
+php D:\www\2017\mg\pj09\site\bin/magento cache:clean
+php D:\www\2017\mg\pj09\site\bin/magento setup:static-content:deploy
+
+php D:\www\2017\mg\pj09\site\bin/magento indexer:reindex
+
+php D:\www\magento\magentodev2\bin/magento sampledata:deploy
+Nhap username: 4e6b8cf01f62f3b2d6ddf453af3213fd Copy
+Nhap password: a5605f9b1115fdea4e0cb67676e94b0a Copy
+Chon Y
+php D:\www\magento\magentodev2\bin/magento setup:upgrade
+
+
+php D:\www\magento\magentodev2\bin/magento indexer:reindex
+php D:\www\magento\magentodev2\bin/magento setup:upgrade
+php D:\www\magento\magentodev2\bin/magento cache:clean
+php D:\www\magento\magentodev2\bin/magento setup:static-content:deploy -f
+php D:\www\magento\magento2\bin/magento setup:static-content:deploy --theme frontend/Magento/blank/en_US
+php D:\www\magento\magento2\bin/magento setup:static-content:deploy --exclude=magento/luma,magento/blank
+
+php D:\www\magento\magento2\bin/magento setup:static-content:deploy -f --theme frontend/Tvtheme/yo
+
+
+php D:\www\magento\magento22\bin/magento setup:upgrade
+php D:\www\magento\magento22\bin/magento cache:clean
+php D:\www\magento\magento22\bin/magento setup:static-content:deploy -f
+php D:\www\magento\magento22\bin/magento setup:static-content:deploy --theme frontend/Magento/blank/en_US
+php D:\www\magento\magento22\bin/magento setup:static-content:deploy --exclude=magento/luma,magento/blank
+php D:\www\magento\magento22\bin/magento setup:static-content:deploy -f --theme frontend/Tvtheme/yo
+php D:\www\magento\magento22\bin/magento setup:static-content:deploy -f --theme frontend/Smartwave/porto
+
+
+php D:\www\2017\mg\pj07\site\bin/magento cache:disable
