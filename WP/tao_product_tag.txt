@@ -1,0 +1,5 @@
+<?php
+Code nay dung de thêm product tag cho 1 product khi biet productID=173
+$test1 =  wp_set_object_terms(173,'sfsdsdfsdffsfsfsafdtrue','product_tag', true);
+print_r($test1);
+?>

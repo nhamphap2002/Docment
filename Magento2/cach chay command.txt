@@ -42,6 +42,7 @@ Chon Y
 php D:\www\magento\magentodev2\bin/magento setup:upgrade
 
 
+
 php D:\www\magento\magentodev2\bin/magento indexer:reindex
 php D:\www\magento\magentodev2\bin/magento setup:upgrade
 php D:\www\magento\magentodev2\bin/magento cache:clean
@@ -62,3 +63,17 @@ php D:\www\magento\magento22\bin/magento setup:static-content:deploy -f --theme 
 
 
 php D:\www\2017\mg\pj07\site\bin/magento cache:disable
+php D:\www\2017\mg\pj07\site\ composer require magento/product-community-edition 2.2.1 --no-update
+
+Thuc hien update magento 2 ban moi nhat ta lam cac buoc nhu sau
+1. Cai dat composer.
+2. Thay doi duong dan toi thu muc chua site can upadate
+d:
+cd php D:\www\2017\mg\pj07\site
+3. Chay lenh update
+composer require magento/product-community-edition 2.2.1 --no-update
+4. Nhap thong tin tai khoan
+Nhap username: 4e6b8cf01f62f3b2d6ddf453af3213fd Copy
+Nhap password: a5605f9b1115fdea4e0cb67676e94b0a Copy
+Chon Y
+
