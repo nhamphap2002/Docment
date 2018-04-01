@@ -4,6 +4,7 @@ run/cmd
 cd <thu muc chua php>
 VD: cd C:\xampp\php
 VD: cd D:\xampp\php
+VD: cd e:\xampp\php
 hoac d:
 3. sau do ta chay lenh command tu day
 php <thu muc cua site>/bin/magento command line
@@ -77,3 +78,20 @@ Nhap username: 4e6b8cf01f62f3b2d6ddf453af3213fd Copy
 Nhap password: a5605f9b1115fdea4e0cb67676e94b0a Copy
 Chon Y
 
+php D:\www\mgt\mdev2\bin/magento setup:upgrade
+php D:\www\mgt\mdev2\bin/magento cache:clean
+php D:\www\mgt\mdev2\bin/magento thlassche:regenerate_product_urls
+fsVHuFzj9ZeP3v8y
+4. php -f bin/magento module:enable ThLassche_RegenerateRewrites
+5. php -f bin/magento setup:upgrade
+6. php -f bin/magento setup:di:compile
+7. php -f bin/magento cache:flush
+/usr/local/bin/ea-php70 bin/magento setup:upgrade
+/usr/local/bin/ea-php70 bin/magento cache:clean
+
+php D:\www\2018\mg\spicewala\site\bin/magento setup:upgrade
+php D:\www\2018\mg\spicewala\site\bin/magento setup:static-content:deploy
+php D:\www\2018\mg\spicewala\site\bin/magento cache:clean
+
+
+/usr/local/bin/ea-php70 bin/magento thlassche:regenerate_product_urls
