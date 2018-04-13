@@ -1,0 +1,3 @@
+dung phan men poeidt
+Vietnamese	vi	vi .mo
+chu y duoi nay trong wmpl

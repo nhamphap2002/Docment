@@ -1,0 +1,53 @@
+sudo -i
+yum install php5 mysql5-server httpd
+php -V
+yum install php
+Y
+yum install mysql
+N
+yum install mysql5-server mysql
+Y 
+/etc/init.d/mysqld start
+mysql
+create database wordpress;
+grant all on wordpress.* to wordpressU@'localhost' identified by 'wordpressP';
+flush privileges;
+exit
+/etc/init.d/httpd start
+cd /var/www/html
+ll
+wget https://wordpress.org/latest.tar.gz
+ll
+tar xzf latest.tar.gz
+ll
+chown -R apache.apache wordpress/
+vi /etc/httpd/conf/httpd.conf
+/user
+/apache
+:q!
+/etc/init.d/httpd restart
+
+wget http://trongthang.demo.mgroupvn.com/site.zip
+INSTALL CPANEL
+sudo yum update
+sudo yum install perl
+sudo yum install nano
+sudo nano /etc/sysconfig/network
+HOSTNAME=ip-172-31-31-26.sysadmin.info
+ctrl+x
+y 
+sudo reboot
+
+sudo curl -o latest -L https://securedownloads.cpanel.net/latest
+ls
+sudo sh latest
+
+ERROR
+1. Your PHP installation appears to be missing the MySQL extension which is required by WordPress.
+sudo yum install php-mysqlnd
+2. /etc/init.d/mysqld: No such file or directory
+yum install mysql mysql-server -y
+
+sudo chmod -R 775 /var/www/htm/wordpress
+sudo chmod -R 775 wordpress
+sudo chmod -R 777 html
