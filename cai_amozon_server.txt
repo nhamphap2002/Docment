@@ -51,3 +51,12 @@ yum install mysql mysql-server -y
 sudo chmod -R 775 /var/www/htm/wordpress
 sudo chmod -R 775 wordpress
 sudo chmod -R 777 html
+
+phpmyadmin
+U:root
+P:mg123456
+cai unzip 
+sudo apt-get install unzip
+
+cai mail 
+sudo apt-get install sendmail
