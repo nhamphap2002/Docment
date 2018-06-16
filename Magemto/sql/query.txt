@@ -1,0 +1,3 @@
+$read = Mage::getSingleton('core/resource')->getConnection('core_read');
+$tvsql = $read->query("SELECT value FROM catalog_category_entity_datetime WHERE entity_id = " . $ids . " AND attribute_id = 315");
+$result = $tvsql->fetch();

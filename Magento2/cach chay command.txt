@@ -95,3 +95,5 @@ php D:\www\2018\mg\spicewala\site\bin/magento cache:clean
 
 
 /usr/local/bin/ea-php70 bin/magento thlassche:regenerate_product_urls
+
+bin/magento admin:user:create --admin-user='thangtran' --admin-password='admin123456' --admin-email='thang.testdev@gmail.com' --admin-firstname='Thang' --admin-lastname='Tran'
