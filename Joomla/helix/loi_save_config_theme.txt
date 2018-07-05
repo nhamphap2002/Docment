@@ -1,0 +1,5 @@
+D:\www\2018\mg\prime\site\plugins\system\helix\js\admin\layout.admin.js
+
+bo code sau trong 
+document.adminForm.onsubmit = function () {
+        return false;
