@@ -62,6 +62,8 @@ php D:\www\magento\magento22\bin/magento setup:static-content:deploy --exclude=m
 php D:\www\magento\magento22\bin/magento setup:static-content:deploy -f --theme frontend/Tvtheme/yo
 php D:\www\magento\magento22\bin/magento setup:static-content:deploy -f --theme frontend/Smartwave/porto
 
+bin/magento setup:static-content:deploy --language[="ar_SA"]
+
 
 php D:\www\2017\mg\pj07\site\bin/magento cache:disable
 php D:\www\2017\mg\pj07\site\ composer require magento/product-community-edition 2.2.1 --no-update
@@ -96,4 +98,19 @@ php D:\www\2018\mg\spicewala\site\bin/magento cache:clean
 
 /usr/local/bin/ea-php70 bin/magento thlassche:regenerate_product_urls
 
+add user admin
 bin/magento admin:user:create --admin-user='thangtran' --admin-password='admin123456' --admin-email='thang.testdev@gmail.com' --admin-firstname='Thang' --admin-lastname='Tran'
+
+delete folder
+rm -r frontend
+
+
+bin/magento setup:backup --code
+
+bin/magento setup:backup --db
+
+bin/magento i18n:collect-phrases --output="app/design/frontend/Netbase/printshop/i18n/en_US.csv" app/design/Netbase/printshop
+
+php bin/magento setup:static-content:deploy -f -l ar_SA
+
+zip -r app.zip app

@@ -1,0 +1,25 @@
+D:\www\2018\mg\glutenfreesg\site\wp-content\themes\green-farm-child\functions.php
+// define the woocommerce_stock_html callback 
+
+function giang_filter_woocommerce_stock_html( $availability_html, $availability_availability, $product ) { 
+
+    // make filter magic happen here... 
+
+    if( $product->get_stock_quantity() <= 5 ) {
+
+    	return $availability_html; 
+
+    }
+
+}; 
+
+         
+
+// add the filter 
+
+add_filter( 'woocommerce_stock_html', 'giang_filter_woocommerce_stock_html', 10, 3 ); 
+
+D:\www\2018\mg\glutenfreesg\site\wp-content\themes\green-farm-child\woocommerce\content-single-product.php
+
+
+echo apply_filters('woocommerce_stock_html', '<span class="' . esc_attr($availability['class']) . '"><span>' . esc_html($availability['availability']) . '</span></span>', $availability['availability'], $product);

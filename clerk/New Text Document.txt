@@ -1,0 +1,175 @@
+<li class="product test-class">
+    <a class="product-image" href="{{ url }}"><img src="{{ image }}" /></a>
+    <div class="product-details-s">
+        <strong class="product-name"><a href="{{ url }}">{{ name }}</a></strong>
+        <div class="clerk-product-price">Pris {{ money price }}</div>
+    </div>
+    <div class="clerk-cta-button action primary"><a href="{{ url }}">See more</a></div>
+</li>
+
+
+<div class="block block-related block-related-thumbnails test-by-ton">
+    <strong class="section-title padding-right">{{ headline }}</strong>
+    <!--<h2> headline </h2>-->
+    <div class="itemslider-wrapper itemslider-related-wrapper slider-arrows1 slider-arrows1-pos-top-right slider-pagination1">
+        <div id="itemslider-related-multi-test" class="itemslider ">
+            <div class="item">
+                <ul id="{{ $id }}" class=":target clerk-slider"></ul>
+            </div>
+        </div>   
+    </div>
+</div>
+<!-- This code creates the slider by its ID. -->
+<script type="text/javascript">
+    function chunkArray(myArray, chunk_size){
+        var results = [];
+        while (myArray.length) {
+            results.push(myArray.splice(0, chunk_size));
+        }
+        return results;
+    }
+    
+    jQuery( window ).on( "load", function() {
+        var resultFind = jQuery('li.test-class'); /*.length ok*/
+        var newHTMLDOM;
+        var result = chunkArray(resultFind,4);
+        jQuery.each(result, function(key, value){
+	        var html = jQuery('<div class="item"></div>');
+	        var liHTML = jQuery('<ul class="clearer"></ul>');
+	        jQuery.each(value, function(k, element){
+	            jQuery(liHTML).append(element);
+		        /*jQuery(element).appendTo(html);*/
+	        });
+	        jQuery(html).append(liHTML);
+	       jQuery('#itemslider-related-multi-test').append(html);
+	       console.log(html);
+        });
+        var firstEelement = jQuery('#itemslider-related-multi-test > .item')[0];
+        jQuery(firstEelement).remove();
+        
+        var owlNew = jQuery("#itemslider-related-multi-test");
+        owlNew.owlCarousel({
+            items:4,
+            itemsCustom: [ [0, 1], [480, 2], [768, 1] ],
+            responsiveRefreshRate: 50,
+            slideSpeed: 200,
+            paginationSpeed: 500,
+            scrollPerPage: true,
+            autoPlay: 10000,
+            stopOnHover: true,
+            rewindNav: true,
+            rewindSpeed: 600,
+            pagination: false,
+            navigation: true,
+            navigationText: false
+        });
+    });
+
+    jQuery( document ).ready(function(){
+        var liLength = jQuery('li.test-class').length;
+        console.log(` document load ${liLength}`);
+       
+    });
+    
+</script>
+
+.product.test-class {
+    text-align: center;
+    margin: auto;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding: 10px;
+    width: auto;
+}
+.block-related-thumbnails .product-image img {
+    width:180px;
+}
+.clerk-cta-button a,
+.clerk-cta-button a:hover{
+    color: white;
+}
+.block-related-thumbnails .test-class .product-image{
+    float: none;
+}
+/*.clerk-product {
+    box-sizing: border-box;
+
+    /*float: left;
+
+    /*width: calc(20% - 10px);
+    
+    margin: 5px;
+    padding: 5px;
+    
+    text-align: center;
+    line-height: 1.2em;
+    
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.clerk-product img {
+    max-width: 100%;
+    max-height: 180px;
+    
+    margin: 5px 10px;
+}
+
+.clerk-product-name {
+    overflow: hidden;
+    
+    height: 2.6em;
+    
+    margin: 5px 10px;
+}
+
+.clerk-product-price {
+    margin: 5px;
+    
+    font-weight: bold;
+}
+
+.clerk-cta-button {
+    margin: 10px 10px 5px 10px;
+    
+    padding: 10px 20px;
+    
+    border-radius: 3px;
+    
+    background-color: #940000;
+    color: white;
+
+    line-height: 1em;
+}
+
+.clerk-slider {
+    list-style: none;
+    
+    width: 100%;
+    
+    margin: 10px 0;
+    padding: 0;
+}
+
+.clerk-product > a, .clerk-product > a:hover, .clerk-product > a:visited {
+    display: block;
+    
+    color: inherit;
+    text-decoration: inherit;
+}
+
+@media only screen and (max-width : 800px) {
+    /*.clerk-product {
+        width: calc(50% - 10px);
+    }
+}*/
+
+
+{
+    templateFormatters: {
+        log_name:function(name){
+            console.log(name);
+        }
+    }
+}
