@@ -1,3 +1,4 @@
+https://help.clerk.io/using-clerk-io-on-magento-1
 <li class="product test-class">
     <a class="product-image" href="{{ url }}"><img src="{{ image }}" /></a>
     <div class="product-details-s">
