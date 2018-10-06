@@ -1,0 +1,26 @@
+
+D:\www\2018\mg\ccv-immobilien\site\libraries\gantry\facets\menu\gantrymenu.class.php
+
+fix menu ngon ngu
+$language = $_REQUEST['language'];
+        if ($language == 'en-GB')
+            $rows = $items->getItems('menutype', 'english-menu');
+        else
+            $rows = $items->getItems('menutype', $params->get('menutype'));
+			
+			
+			
+D:\www\2018\mg\ccv-immobilien\site\templates\rt_gantry\template-options.xml
+<fields name="touchmenu" type="chain" label="IPHONE_MENU">
+            <field name="menutype" type="menus" default="mainmenu" label="MENU_SELECT"/>
+            <field name="enmenutype" type="menus" default="mainmenu" label="Select a Menu English" />
+            <field name="cnmenutype" type="menus" default="mainmenu" label="Select a Menu Chinese" />
+D:\www\2018\mg\ccv-immobilien\site\libraries\gantry\facets\menu\gantrymenu.class.php
+$language = $_REQUEST['language'];
+        if ($language == 'en-GB') {
+            $rows = $items->getItems('menutype', $params->get('enmenutype'));
+        } else if ($language == 'zh-CN') {
+            $rows = $items->getItems('menutype', $params->get('cnmenutype'));
+        } else {
+            $rows = $items->getItems('menutype', $params->get('menutype'));
+        }			
