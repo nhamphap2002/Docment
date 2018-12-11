@@ -1,0 +1,7 @@
+D:\www\jl\joomla_39\administrator\components\com_bannerslider\tables\item.php
+ public function __construct(&$db) {
+        JObserverMapper::addObserverClassToClass('JTableObserverContenthistory', 'BannersliderTableitem', array('typeAlias' => 'com_bannerslider.item'));
+        parent::__construct('#__bannerslider_items', 'id', $db);
+//them dong nay de fix loi
+        $this->setColumnAlias('published', 'state');
+    }
