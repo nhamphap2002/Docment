@@ -2,3 +2,10 @@ backup thu muc skin
 sudo tar -zcvf skin.tgz skin
 backup thu muc app
 sudo tar -zcvf app.tgz app
+
+zip -r myfiles.zip mydir
+
+cronjob xoa log
+/usr/local/bin/php53 -f /home/dot4med2/public_html/shell/log.php clean --days 15
+
+/usr/local/bin/php53 -f /home/dot4med2/public_html/shell/log.php status
