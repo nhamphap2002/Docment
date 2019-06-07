@@ -1,0 +1,26 @@
+//The URL you want to send a cURL proxy request to.
+$url = 'http://dev.t2ads.com/test.php';
+
+//The IP address of the proxy you want to send
+//your request through.
+$proxyIP = '35.221.46.148';
+
+//The port that the proxy is listening on.
+$proxyPort = '3128';
+
+
+$curlHandle = curl_init();
+curl_setopt($curlHandle, CURLOPT_URL, $url);
+curl_setopt($curlHandle, CURLOPT_HEADER, 0);
+curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, 1);
+//run proxy
+curl_setopt($curlHandle, CURLOPT_PROXY, $proxyIP . ':' . $proxyPort);
+curl_setopt($curlHandle, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.1; rv:1.7.3) Gecko/20041001 Firefox/0.10.1");
+curl_setopt($curlHandle, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($curlHandle, CURLOPT_ENCODING, "");
+curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curlHandle, CURLOPT_AUTOREFERER, true);
+curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, false);
+$result = curl_exec($curlHandle);
+curl_close($curlHandle);
+echo $result;
