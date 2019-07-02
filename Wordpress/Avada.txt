@@ -1,0 +1,27 @@
+D:\www\2019\mg\kiosk24\site\wp-content\themes\Avada\includes\lib\inc\class-fusion-product-registration.php
+
+/**
+	 * Has user associated with current token purchased this product?
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 * @return bool
+	 */
+	public function is_registered() {
+
+		// Get the option.
+		$registered = get_option( 'fusion_registered' );
+
+		// Is the product registered?
+		if ( isset( $registered[ $this->product_id ] ) && true === $registered[ $this->product_id ] ) {
+			return true;
+		}
+
+		// Is the Envato API down?
+		if ( get_site_transient( 'fusion_envato_api_down' ) ) {
+			return true;
+		}
+
+		// Fallback to false.
+		return true;
+	}
