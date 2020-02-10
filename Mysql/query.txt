@@ -1,0 +1,1 @@
+TRUNCATE `jim6x_guru_order`
